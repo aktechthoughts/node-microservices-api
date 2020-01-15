@@ -5,7 +5,7 @@ const { ValidationError } = require("moleculer").Errors;
 const TestService = require("../../services/greeter.service");
 
 describe("Test 'greeter' service", () => {
-	let broker = new ServiceBroker({ logger: false });
+	let broker = new ServiceBroker();
 	broker.createService(TestService);
 
 	beforeAll(() => broker.start());
